@@ -1,9 +1,9 @@
 module.exports = function(app){
   app.get('/produtos', function(req, res){
     var connection = app.infra.connectionFactory();
-    var produtoBanco = new app.infra.ProdutosDAO(connection);
+    var produtoDAO = new app.infra.ProdutosDAO(connection);
 
-  produtoBanco.lista(function(erros, resultados){
+  produtoDAO.lista(function(erros, resultados){
     res.render('produtos/lista', {lista:resultados});
   });
   connection.end();
@@ -12,7 +12,7 @@ module.exports = function(app){
 app.get('produtos/remove', function(){
 
   var connection = app.infra.connectionFactory();
-  var produtoBanco = app.infra.ProdutosDAO;
+  var produtoDAO = app.infra.ProdutosDAO;
   var produto = ProdutosDAO.carrega(id, callback);
 
   if(produto){
@@ -20,4 +20,8 @@ app.get('produtos/remove', function(){
   }
 });
 
+app.get('/produtos/form', function(req, res){
+  res.render('produtos/form');
+
+});
 }
