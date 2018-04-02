@@ -22,9 +22,9 @@ var client = http.request(configuracoes, function(res){
 });
 
 var produto = {
-  título: '',
-  descricao: '2',
+  titulo: 'teste',
+  descricao: 'descricão',
   preco: '100'
-};
+}
 
 client.end(JSON.stringify(produto));
