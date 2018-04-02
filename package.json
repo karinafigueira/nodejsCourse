@@ -4,13 +4,14 @@
   "description": "site da casa do codigo",
   "main": "index.js",
   "scripts": {
-    "test": "set \"NODE_ENV=test\"&&node node_modules/mocha/bin/mocha"
+    "test": "set NODE_ENV=test&& mocha --reporter spec"
   },
   "author": "karina",
   "license": "ISC",
   "dependencies": {
     "assert": "^1.4.1",
     "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
     "ejs": "^2.5.6",
     "express": "^4.16.3",
     "express-load": "^1.1.16",
