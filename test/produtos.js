@@ -4,7 +4,7 @@ describe('ProdutosController', function(){
 
     beforeEach(function(done) {
         var connection = express.infra.connectionFactory();            
-        connection.query("delete from livros", function(ex,result){
+        connection.query("delete from produtos", function(ex,result){
             if(!ex){
                 done();
             }

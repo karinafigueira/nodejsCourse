@@ -4,7 +4,7 @@ module.exports = function(app){
     var produtosDAO = new app.infra.ProdutosDAO(connection);
 
     produtosDAO.lista(function(err, results) {
-        if(err) {
+        if(err){
             return next(err);
         }
         res.format({
