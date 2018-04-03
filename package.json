@@ -19,7 +19,8 @@
     "mysql": "^2.15.0",
     "nodejs": "9.8.0",
     "qs": "^6.5.1",
-    "query-string": "^6.0.0"
+    "query-string": "^6.0.0",
+    "socket.io": "^2.1.0"
   },
   "devDependencies": {
     "mocha": "^5.0.5",

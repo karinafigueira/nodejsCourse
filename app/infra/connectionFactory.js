@@ -3,7 +3,7 @@ var mysql = require('mysql');
 function createDBConnection() {
   console.log("NODE_ENV: " + process.env.NODE_ENV);
 
-  if(!process.env.NODE_ENV == 'development') {
+/*   if(!process.env.NODE_ENV == 'development') {
     
       return mysql.createConnection({
         host:'localhost',
@@ -11,7 +11,7 @@ function createDBConnection() {
         password:'password',
           database: 'casadocodigo_nodejs'
       });
-  } else {
+  } else { */
       return mysql.createConnection({
         host:'localhost',
         user:'karina',
@@ -19,7 +19,7 @@ function createDBConnection() {
           database: 'casadocodigo_nodejs_test'
       });
   
-  }
+  //}
 }
 
 module.exports = function() {

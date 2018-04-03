@@ -2,14 +2,14 @@ var express = require('../config/express')();
 var request = require('supertest')(express);
 describe('ProdutosController', function(){
 
-    beforeEach(function(done) {
+    /* beforeEach(function(done) {
         var connection = express.infra.connectionFactory();            
         connection.query("delete from produtos", function(ex,result){
             if(!ex){
                 done();
             }
         });
- });
+ }); */
 
     it('listagem json', function(done){
         request.get('/produtos')
